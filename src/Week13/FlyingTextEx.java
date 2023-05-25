@@ -29,13 +29,13 @@ public class FlyingTextEx extends JFrame{
 		c.requestFocus();		// component에 포커스 강제 지정
 		
 		// 컨텐트팬에 포커스를 잃은 경우 마우스를 클릭하면 다시 포커스를 얻게 됨
-//		c.addMouseListener(new MouseAdapter() {
-//			public void mouseClicked(MouseEvent e) {
-//				Container c =(Container)e.getSource();
-//				c.setFocusable(true);
-//				c.requestFocus();
-//			}
-//		});
+		c.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				Container c =(Container)e.getSource();
+				c.setFocusable(true);
+				c.requestFocus();
+			}
+		});
 	}
 	class MyKeyListener extends KeyAdapter{
 		public void keyPressed(KeyEvent e) {
